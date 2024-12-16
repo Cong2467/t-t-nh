@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình Nhưng... Chỉ Là Bạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            display: none;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #008cba;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005f75;
+        }
+        #final-message {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff0000;
+            display: none;
+            margin-top: 20px;
+        }
+        #share-message {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #ff5500;
+            display: none;
+        }
+        a {
+            color: #ff5500;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Có Một Điều Quan Trọng Mình Muốn Nói...</h1>
+    <p id="part1">Suốt thời gian qua, mình luôn nghĩ về bạn. Mỗi lần chúng ta gặp nhau, trái tim mình như lỡ nhịp. Có lúc mình cảm thấy như thế giới này chỉ có bạn và mình, như một điều gì đó thật đặc biệt giữa chúng ta. Và mình nghĩ rằng... mình đã tìm thấy người quan trọng nhất trong đời mình...</p>
+    <p id="part2">Những khoảnh khắc chúng ta chia sẻ, những câu chuyện mà chúng ta đã nói, tất cả đều khiến mình cảm thấy như thể chúng ta sinh ra là dành cho nhau. Bạn là người mình luôn muốn dành thời gian bên cạnh, người mình muốn chia sẻ mọi niềm vui và nỗi buồn trong cuộc sống này...</p>
+    <p id="part3">Mình đã suy nghĩ rất nhiều về điều này. Và cuối cùng, mình quyết định nói ra lời này: Mình yêu bạn, và mình muốn chúng ta tiếp tục một mối quan hệ đặc biệt hơn nữa. Chắc chắn rằng bạn là người duy nhất mình muốn ở bên cạnh, là người mà trái tim mình đã tìm kiếm từ lâu...</p>
+
+    <button id="start-btn">Tiếp tục...</button>
+
+    <div id="final-message">Nhưng... Mình chỉ coi bạn là bạn thôi. 😅</div>
+
+    <div id="share-message">
+        Nếu bạn không giận, chia sẻ điều này với bạn bè nhé, để họ cũng được cùng trải qua cảm giác "bị lừa" này! <a href="#">Chia sẻ với bạn bè</a>
+    </div>
+
+    <script>
+        const startBtn = document.getElementById('start-btn');
+        const part1 = document.getElementById('part1');
+        const part2 = document.getElementById('part2');
+        const part3 = document.getElementById('part3');
+        const finalMessage = document.getElementById('final-message');
+        const shareMessage = document.getElementById('share-message');
+
+        // Khi nhấn nút "Tiếp tục..."
+        startBtn.addEventListener('click', () => {
+            startBtn.textContent = "Đợi chút...";
+            startBtn.disabled = true;
+            
+            setTimeout(() => {
+                part1.style.display = 'block'; // Hiển thị phần đầu tiên của bài tỏ tình
+                setTimeout(() => {
+                    part2.style.display = 'block'; // Hiển thị phần tiếp theo
+                    setTimeout(() => {
+                        part3.style.display = 'block'; // Hiển thị phần kết thúc
+                        setTimeout(() => {
+                            finalMessage.style.display = 'block'; // Hiển thị kết quả troll
+                            setTimeout(() => {
+                                shareMessage.style.display = 'block'; // Hiển thị thông báo chia sẻ
+                            }, 2000);
+                        }, 2000);
+                    }, 2000);
+                }, 2000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
